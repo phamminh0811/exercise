@@ -2,15 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link href="/styles/login.css" rel="stylesheet" type="text/css"  />
+    <link rel="stylesheet" href="index.css" >
 
   </head>
     
   <body>
-    
     <div id="id01" class="login">
         <h1>SOIOT SYSTEM</h1>
-        <form name="login" action='/' method="post">
+        <form name="login" action='../dashboard/index.html' onsubmit="validateForm()">
           <div class="form-control">
             <input name="username" type="text" placeholder="user name" >
           </div>
@@ -21,5 +20,6 @@
           <a href="#">or create new account</a>
         </form>
       </div>
+      <script src="login.js"></script>  
   </body>
-</html>
+  </html>

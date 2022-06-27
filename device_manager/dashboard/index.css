@@ -93,7 +93,7 @@ table{
     box-sizing: border-box;
 }
 
-form .button-control {
+.add-device .button-control {
     background-color: #f39629;
     border-color: #f39629;
     color: rgb(255, 255, 255);

@@ -1,3 +1,25 @@
+// [   
+//     {
+//         "device": "TV",
+//         "created_date": "2022-06-18",
+//         "power_consume": 50
+//     },
+//     {
+//         "device": "Washer",
+//         "created_date": "2022-06-19",
+//         "power_consume": 60
+//     },
+//     {
+//         "device": "Refrigerator",
+//         "created_date": "2022-06-20",
+//         "power_consume": 80
+//     },
+//     {
+//         "device": "Selling Fan",
+//         "created_date": "2022-06-21",
+//         "power_consume": 100
+//     }
+// ]
 
 async function addDevice() {
     let device_name = document.getElementById("input-name").value;
@@ -47,7 +69,7 @@ function getCurrDate() {
 }
 
 function showDevices() {
-    fetch('/controller/dashboard.json')
+    fetch('./dashboard.json')
         .then(response => response.json())
         .then(data => {
             var devices = data;
@@ -78,7 +100,7 @@ function showDevices() {
 }
 
 function showDevicesDashboard() {
-    fetch('/controller/dashboard.json')
+    fetch('./dashboard.json')
         .then(response => response.json())
         .then(data => {
             var devices = data;

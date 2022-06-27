@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="/styles/dashboard.css" >
+    <link rel="stylesheet" href="index.css" >
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body onload=" showDevices(); showDevicesDashboard();">
@@ -11,7 +11,7 @@
             <ul class="nav_list">
                 <li>
                     <div class="logo_content">
-                        <a href="/dashboard" type="padding: 0px 12px">
+                        <a href="#" type="padding: 0px 12px">
                             <i class='bx bx-devices' ></i>
                             <span class="logo_name" > Device Manager</span>
                         </a>   
@@ -19,7 +19,7 @@
                 </li>
                 <li>
                     <div class="dashboard_content">
-                        <a href="/dashboard">
+                        <a href="#">
                             <i class='bx bxs-dashboard' ></i>
                             <span class="links_name">Dashboard</span>
                         </a>
@@ -27,7 +27,7 @@
                 </li>
                 <li>
                     <div class="dashboard_content">
-                        <a href="/action_logs">
+                        <a href="../logs/index.html">
                             <i class='bx bx-time' ></i>
                             <span class="links_name">Logs</span>
                         </a>
@@ -35,7 +35,7 @@
                 </li>
                 <li>
                     <div class="dashboard_content">
-                        <a href="/dashboard">
+                        <a href="#">
                             <i class='bx bx-cog' ></i>
                             <span class="links_name">Setting</span>
                         </a>
@@ -73,15 +73,13 @@
                 <div id="dashboard-display">
                 </div>
                 <div class="add-device" style="height:400px;">
-                    <form name="add_device" action="#" onsubmit="addDevice();">
                         <div class="form-control">
-                            <input name="name" type="text" placeholder="name" required>
+                            <input id="input-name" name="name" type="text" placeholder="name" required>
                         </div>
                         <div class="form-control">
-                            <input name="power_consume" type="text" placeholder="power consume" required>
+                            <input id="input-pow-consume" name="power_consume" type="text" placeholder="power consume" required>
                         </div>
-                        <button class="button-control">ADD DEVICE</button>
-                    </form>
+                        <button class="button-control" onclick="addDevice();">ADD DEVICE</button>
                 </div>
             </div>
         </div>
@@ -89,6 +87,6 @@
         
     </div>
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-    <script src="/controller/dashboard.js"></script>
+    <script src="dashboard.js"></script>
 </body>
 </html>
