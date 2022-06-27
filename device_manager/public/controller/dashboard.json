@@ -1,0 +1,22 @@
+[   
+    {
+        "device": "TV",
+        "created_date": "2022-06-18",
+        "power_consume": 50
+    },
+    {
+        "device": "Washer",
+        "created_date": "2022-06-19",
+        "power_consume": 60
+    },
+    {
+        "device": "Refrigerator",
+        "created_date": "2022-06-20",
+        "power_consume": 80
+    },
+    {
+        "device": "Selling Fan",
+        "created_date": "2022-06-21",
+        "power_consume": 100
+    }
+]

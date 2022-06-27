@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/styles/dashboard.css" >
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body onload=" showDevices(); showDevicesDashboard();">
+    <div class="main">
+        <div class="sidebar">
+            <ul class="nav_list">
+                <li>
+                    <div class="logo_content">
+                        <a href="/dashboard" type="padding: 0px 12px">
+                            <i class='bx bx-devices' ></i>
+                            <span class="logo_name" > Device Manager</span>
+                        </a>   
+                    </div>
+                </li>
+                <li>
+                    <div class="dashboard_content">
+                        <a href="/dashboard">
+                            <i class='bx bxs-dashboard' ></i>
+                            <span class="links_name">Dashboard</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="dashboard_content">
+                        <a href="/action_logs">
+                            <i class='bx bx-time' ></i>
+                            <span class="links_name">Logs</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="dashboard_content">
+                        <a href="/dashboard">
+                            <i class='bx bx-cog' ></i>
+                            <span class="links_name">Setting</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="table_display">
+            <div class="navbar">
+                <div class="user"  >
+                    <span > Welcome John</span>
+                    <i class='bx bxs-user'></i>
+                </div>
+            </div>
+            <table id="table">
+                <thead id="row_name">
+                    <tr>
+                        <th > Device</th>
+                        <th > Mac Address</th>
+                        <th > IP</th>
+                        <th > Created Date</th>
+                        <th > Power Comsumtion (Kw/H)</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Total</td>
+                        <td id="total_consume">0</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <div id="container">
+                <div id="dashboard-display">
+                </div>
+                <div class="add-device" style="height:400px;">
+                    <form name="add_device" action="#" onsubmit="addDevice();">
+                        <div class="form-control">
+                            <input name="name" type="text" placeholder="name" required>
+                        </div>
+                        <div class="form-control">
+                            <input name="power_consume" type="text" placeholder="power consume" required>
+                        </div>
+                        <button class="button-control">ADD DEVICE</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="/controller/dashboard.js"></script>
+</body>
+</html>
